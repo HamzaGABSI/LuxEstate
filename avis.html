@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Avis Clients - AutoPro</title>
+
+  <!-- FONTS + ICONS pour le header importé -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+
+    /* =============================================
+       TON ANCIEN STYLE DE PAGE — INCHANGÉ
+       =============================================*/
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111111;
+      color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2, h3 {
+      text-align: center;
+      color: gold;
+    }
+
+    .review {
+      background-color: #2c2c2c;
+      border-left: 6px solid rgb(226, 223, 17);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .review:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(194, 182, 14, 0.3);
+    }
+
+    .review::before {
+      content: "★";
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      font-size: 40px;
+      color: gold;
+      background-color: #1f1f1f;
+      border-radius: 50%;
+      padding: 5px 10px;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    .delete-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #900;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form {
+      background-color: #2c2c2c;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 40px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #444;
+      color: white;
+    }
+
+    button {
+      background-color: gold;
+      color: black;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #d4af37;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container { margin: 10px; }
+    }
+
+
+    /* =====================================================
+       👉 NOUVEL EN-TÊTE IMPORTÉ (ET LUI SEUL)
+       ===================================================== */
+
+    :root{
+      --black:#080808;
+      --gold:#d4af37;
+      --gold-2:#c79e2f;
+    }
+
+    header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:50;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 36px;
+      background:linear-gradient(180deg,rgba(0,0,0,0.55),transparent);
+      border-bottom:1px solid rgba(212,175,55,0.06);
+      backdrop-filter:blur(6px);
+      font-family:"Poppins",sans-serif;
+    }
+
+    .logo{
+      color:var(--gold-2);
+      font-size:22px;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    nav{ display:flex; gap:18px; align-items:center; }
+    nav a{
+      color:#eaeaea;
+      text-decoration:none;
+      font-weight:500;
+      opacity:0.95;
+      padding:8px;
+    }
+    nav a:hover{
+      color:var(--gold);
+      transform:translateY(-2px);
+      transition:.22s ease;
+    }
+
+    /* Pour éviter que ton contenu soit caché */
+    .page-offset{ padding-top:110px; }
+    strong{
+        margin-left: 30px;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <!-- ======= NOUVEL HEADER EXACTEMENT COMME L’AUTRE ======= -->
+  <header>
+    <a href="main.html" class="logo">LuxEstate</a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="acceuil.html">Marques</a>
+      <a href="avis.html">Avis</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Décalage pour le header fixe -->
+  <div class="page-offset"></div>
+
+
+  <!-- ======= TON ANCIEN CONTENU — STRICTEMENT IDENTIQUE ======= -->
+  <div class="container">
+    <h2>Commentaires</h2>
+
+    <div class="review">
+      <strong>Fatima</strong>
+      <div class="stars">★★★★★</div>
+      <p>Voiture impeccable, service rapide et professionnel. Je recommande!</p>
+    </div>
+
+    <div class="review">
+      <strong>Youssef</strong>
+      <div class="stars">★★★★☆</div>
+      <p>Très bon accueil et voiture en excellent état. Merci à toute l'équipe!</p>
+    </div>
+
+    <form>
+      <h3>Laissez votre avis</h3>
+      <input type="text" placeholder="Votre nom" required />
+      <select required>
+        <option value="">Note (1 à 5)</option>
+        <option value="1">★☆☆☆☆</option>
+        <option value="2">★★☆☆☆</option>
+        <option value="3">★★★☆☆</option>
+        <option value="4">★★★★☆</option>
+        <option value="5">★★★★★</option>
+      </select>
+      <textarea rows="4" placeholder="Votre commentaire..." required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+
+  <!-- TON JS : Inchangé -->
+  <script>
+    const container = document.querySelector(".container");
+    const form = document.querySelector("form");
+
+    function addReview(name, rating, comment, scroll = true) {
+      const stars = "★".repeat(rating) + "☆".repeat(5 - rating);
+      const newReview = document.createElement("div");
+      newReview.className = "review";
+      newReview.innerHTML = `
+        <strong>${name}</strong>
+        <div class="stars">${stars}</div>
+        <p>${comment}</p>
+        <button class="delete-btn">🗑</button>
+      `;
+
+      newReview.querySelector(".delete-btn").addEventListener("click", () => {
+        newReview.remove();
+        let saved = JSON.parse(localStorage.getItem("autopro_reviews") || "[]");
+        saved = saved.filter(r => !(r.name === name && r.rating === rating && r.comment === comment));
+        localStorage.setItem("autopro_reviews", JSON.stringify(saved));
+      });
+
+      container.insertBefore(newReview, form);
+
+      if (scroll) newReview.scrollIntoView({ behavior: "smooth" });
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const saved = JSON.parse(localStorage.getItem("autopro_reviews") || "[]");
+      saved.forEach(r => addReview(r.name, r.rating, r.comment, false));
+    });
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = this.querySelector("input").value.trim();
+      const rating = this.querySelector("select").value;
+      const comment = this.querySelector("textarea").value.trim();
+
+      if (!name || !rating || !comment) return;
+
+      addReview(name, rating, comment);
+
+      const saved = JSON.parse(localStorage.getItem("autopro_reviews") || "[]");
+      saved.push({ name, rating, comment });
+      localStorage.setItem("autopro_reviews", JSON.stringify(saved));
+
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

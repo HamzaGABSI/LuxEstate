@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Audi— Modèles</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#080808;--gold:#d4af37;--gold-2:#c79e2f;--muted:#bfbfbf;--card:rgba(255,255,255,0.03)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Poppins",sans-serif;background:linear-gradient(180deg,var(--black),#020202);color:#fff;min-height:100vh}
+.container{max-width:1100px;margin:0 auto;padding:26px}
+.header{display:flex;justify-content:space-between;align-items:center}
+.header a{color:var(--muted);text-decoration:none;padding:8px}
+.page-head{text-align:center;margin:34px 0}
+.page-head h2{font-family:"Playfair Display";color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.card h3{font-family:"Playfair Display";color:var(--gold);margin:10px 0 6px}
+.card p{
+    color:var(--muted);
+    font-size:14px;
+    height:110px ;
+}
+.row{display:flex;gap:8px;margin-top:10px;align-items:center;justify-content:space-between}
+.small-btn{padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff;text-decoration:none;font-weight:600}
+.call{background:linear-gradient(90deg,var(--gold),var(--gold-2));color:#07100a;border:none;padding:8px 12px;border-radius:999px;text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div style="display:flex;gap:12px;align-items:center">
+  <a href="Acceuil.html"><img src="https://i.pinimg.com/736x/de/24/10/de2410ea10670561a518e8ef81b79b05.jpg" 
+       alt="Logo Mercedes" 
+style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)"></a>
+  <h1 style="font-family:'Playfair Display';color:var(--gold)">Audi</h1>
+</div>
+
+      <nav>
+        <a href="Acceuil.html">Accueil
+        </a>
+    </nav>
+    </header>
+
+    <section class="page-head">
+      <h2>Modèles Audi disponibles</h2>
+      <p style="color:var(--muted);max-width:760px;margin:6px auto">Choisissez votre modèle puis cliquez sur Réserver pour compléter votre réservation.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <img  src="https://i.pinimg.com/1200x/17/df/d4/17dfd486af2700a202d8d34a8c30a0b7.jpg" alt="Mercedes S-Class">
+        <h3>Audi A6 </h3>
+        <p>C’est une berline luxe et raffinée, combinant design élégant, confort élevé et technologies modernes (intérieur premium, bonne insonorisation, électronique embarquée)</p>
+        <div class="row">
+          <div style="font-weight:700">3000dh/jour</div>
+          <div>
+            <a class="call" href="reserve.html">Réserver</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://i.pinimg.com/736x/9b/7e/48/9b7e484de26dbbde18daa34bd1276d4a.jpg" alt="Benz G Class AMG">
+        <h3> Audi Q8</h3>
+        <p>un SUV‑coupé luxueux qui combine silhouette sportive, intérieur spacieux et confort haut de gamme, offrant puissance et élégance pour la route ou la ville</p>
+        <div class="row">
+          <div style="font-weight:700">3300dh/jour</div>
+          <div>
+            <a class="call" href="reserve.html">Réserver</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://i.pinimg.com/1200x/bf/87/db/bf87dbcfe440a783afd83f5a391a1b67.jpg" alt="Benz G Class AMG">
+        <h3>Audi Q5</h3>
+        <p>L’Audi Q5 est un SUV premium alliant élégance, confort et polyvalence pour usage urbain et familial.</p>
+        <div class="row">
+          <div style="font-weight:700">2000dh/jour</div>
+          <div>
+            <a class="call" href="reserve.html">Réserver</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+  </div>
+</body>
+</html>

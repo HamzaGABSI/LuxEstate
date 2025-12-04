@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Renault — Modèles</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#080808;--gold:#d4af37;--gold-2:#c79e2f;--muted:#bfbfbf;--card:rgba(255,255,255,0.03)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Poppins",sans-serif;background:linear-gradient(180deg,var(--black),#020202);color:#fff;min-height:100vh}
+.container{max-width:1100px;margin:0 auto;padding:26px}
+.header{display:flex;justify-content:space-between;align-items:center}
+.header a{color:var(--muted);text-decoration:none;padding:8px}
+.page-head{text-align:center;margin:34px 0}
+.page-head h2{font-family:"Playfair Display";color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.card h3{font-family:"Playfair Display";color:var(--gold);margin:10px 0 6px}
+.card p{
+    color:var(--muted);
+    font-size:14px;
+    height:110px ;
+}
+.row{display:flex;gap:8px;margin-top:10px;align-items:center;justify-content:space-between}
+.small-btn{padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff;text-decoration:none;font-weight:600}
+.call{background:linear-gradient(90deg,var(--gold),var(--gold-2));color:#07100a;border:none;padding:8px 12px;border-radius:999px;text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div style="display:flex;gap:12px;align-items:center">
+  <a href="Acceuil.html"><img  class="img1" src="https://i.pinimg.com/736x/c6/29/e5/c629e56f460b8f3242ef195a78e4397a.jpg" 
+       alt="Logo Mercedes" 
+       style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)"></a>
+  <h1 style="font-family:'Playfair Display';color:var(--gold)">Renault</h1>
+</div>
+
+      <nav><a href="Acceuil.html">Accueil</a>
+    </nav>
+    </header>
+
+    <section class="page-head">
+      <h2>Modèles Renault disponibles</h2>
+      <p style="color:var(--muted);max-width:760px;margin:6px auto">Choisissez votre modèle puis cliquez sur Réserver pour compléter votre réservation.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <img  src="https://i.pinimg.com/1200x/c6/31/e9/c631e975f94304d56ecb7c3ea11ddc3d.jpg" alt="TOUAREG">
+        <h3>Renault Clio</h3>
+        <p>Renault Clio — compactité, praticité et confort urbain.</p>
+        <div class="row">
+          <div style="font-weight:700">450DH/jour</div>
+          <div>
+            <a class="small-btn" href="#">Détails</a>
+            <a class="call" href="reserve.html">Réserver</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://i.pinimg.com/1200x/e9/98/24/e9982430c62ab77a4fb1da19bd214270.jpg" alt="Benz G Class AMG">
+        <h3>Renault Kardian</h3>
+        <p>**Renault Kardian — modernité et polyvalence accessible.</p>
+        <div class="row">
+          <div style="font-weight:700">400DH/jour</div>
+          <div>
+            <a class="small-btn" href="#">Détails</a>
+            <a class="call" href="reserve.html">Réserver</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://i.pinimg.com/1200x/e3/d8/04/e3d804c52871b651fdcea1f474ebcbdf.jpg" alt="Benz G Class AMG">
+        <h3>Renault Mégane</h3>
+        <p>Renault Mégane — élégance, confort et conduite équilibrée.</p>
+        <div class="row">
+          <div style="font-weight:700">550dh/jour</div>
+          <div>
+            <a class="small-btn" href="#">Détails</a>
+            <a class="call" href="reserve.html">Réserver</a>
+          </div>
+        </div>
+      </article>
+      </section>
+  </div>
+</body>
+</html>

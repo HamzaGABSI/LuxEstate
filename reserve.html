@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Réservation — LuxEstate</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#080808;--gold:#d4af37;--gold-2:#c79e2f;--muted:#bfbfbf;--card:rgba(255,255,255,0.03)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Poppins",sans-serif;background:linear-gradient(180deg,var(--black),#020202);color:#fff;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:28px}
+.container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 50px rgba(194, 87, 16, 0.3);}
+
+.head{display:flex;justify-content:space-between;align-items:center}
+.head a{color:var(--muted);text-decoration:none}
+.card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);margin-top:18px}
+h2{font-family:"Playfair Display";color:rgb(211, 192, 82)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.input, select, textarea{width:100%;padding:12px;border-radius:8px;background:#0b0b0b;border:1px solid rgba(255,255,255,0.04);color:#fff}
+.full{grid-column:1/-1}
+.actions{display:flex;gap:10px;justify-content:flex-end;margin-top:12px}
+.btn{padding:10px 16px;border-radius:999px;border:none;font-weight:700;cursor:pointer}
+.primary{background:linear-gradient(90deg,var(--gold),var(--gold-2));color:#07100a}
+.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff}
+.note{color:var(--muted);font-size:13px;margin-top:8px}
+@media (max-width:680px){.form-grid{grid-template-columns:1fr} .head{flex-direction:column;align-items:flex-start;gap:10px}}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="head">
+      <div><h1 style="font-family:Playfair Display;color:var(--gold)">Réserver un véhicule</h1><div style="color:var(--muted)">Formulaire de réservation — LuxEstate</div></div>
+      <nav><a href="acceuil.html">← Marques</a> &nbsp; <a href="main.html">Accueil</a></nav>
+    </header>
+
+    <div class="card" role="region" aria-labelledby="resTitle">
+      <h2 id="resTitle">Informations de réservation</h2>
+
+      <form action="#" method="post" novalidate>
+        <div class="form-grid" style="margin-top:12px">
+          <div>
+            <label style="display:block;color:var(--muted);margin-bottom:6px">Nom complet</label>
+            <input class="input" name="fullname" placeholder="Prénom Nom" required>
+          </div>
+
+          <div>
+            <label style="display:block;color:var(--muted);margin-bottom:6px">E-mail</label>
+            <input class="input" type="email" name="email" placeholder="contact@exemple.com" required>
+          </div>
+
+          <div>
+            <label style="display:block;color:var(--muted);margin-bottom:6px">Téléphone / WhatsApp</label>
+            <input class="input" name="phone" placeholder="+212 6 12 34 56 78" required>
+          </div>
+
+          <div>
+            <label style="display:block;color:var(--muted);margin-bottom:6px">Ville de prise en charge</label>
+            <select class="input" name="city">
+              <option>Rabat</option><option>Casablanca</option><option>Marrakech</option><option>Fès</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="display:block;color:var(--muted);margin-bottom:6px">Paiment</label>
+            <select class="input" name="brand">
+              <option>paiement par carte</option><option><Param>Paiment en especes</Param>
+          </div>
+
+          
+
+<div>
+            <label style="display:block;color:var(--muted);margin-bottom:6px">Date prise</label>
+            <input class="input" type="date" name="date_from" required>
+          </div>
+
+          <div>
+            <label style="display:block;color:var(--muted);margin-bottom:6px">Date restitution</label>
+            <input class="input" type="date" name="date_to" required>
+          </div>
+
+          <div class="full">
+            <label style="display:block;color:var(--muted);margin-bottom:6px">Options (chauffeur, assurance, extras)</label>
+            <textarea class="input" rows="4" name="options" placeholder="Ex: Chauffeur privé, siège bébé, etc."></textarea>
+          </div>
+
+          <div class="full">
+            <label style="display:block;color:var(--muted);margin-bottom:6px">Remarques / Instructions</label>
+            <textarea class="input" rows="3" name="notes" placeholder="Lieu de livraison, demandes spéciales..."></textarea>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn secondary" type="reset">Effacer</button>
+          <button class="btn primary" type="submit">Vérifier & Envoyer</button>
+        </div>
+
+        <div class="note">Après vérification, un membre de l'équipe vous contactera pour confirmer la disponibilité et finaliser le paiement.</div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
